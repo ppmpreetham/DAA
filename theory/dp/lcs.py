@@ -19,10 +19,10 @@ def lcs_memo(s1,s2):
     def recurse(i, j):
         if min(i, j) < 0:
             return 0
-        
+
         if (i,j) in memo:
             return memo[(i,j)]
-        
+
         if s1[i] == s2[j]:
             memo[(i,j)] = recurse(i-1,j-1)
         else:
@@ -39,7 +39,5 @@ def lcs_tabulate(s1,s2):
                 dp[i][j] = 1 + dp[i-1,j-1]
             else:
                 dp[i,j] = max(dp[i-1][j], dp[i][j-1])
-    
-    return dp[n][m]
 
-    
+    return dp[n][m]
