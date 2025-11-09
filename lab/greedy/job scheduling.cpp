@@ -12,7 +12,7 @@ bool cmp(Job a, Job b) {
 
 int main() {
     vector<Job> jobs = {{1, 2, 19}, {2, 3, 27}, {3, 4, 25}, {4, 5, 15}};
-    int n = jobs.length();
+    int n = jobs.size();
     sort(jobs.begin(), jobs.end(), cmp);
     int maxd = 0;
 
@@ -21,5 +21,12 @@ int main() {
 
     int profit = 0;
     for(auto &j: jobs)
+        for(int d = j.dead; d>0; d--){
+            if (slot == -1){
+                slot[d] = j.id; 
+                profit += j.profit; 
+                break;
+            }
+        }
     return 0;
 }
