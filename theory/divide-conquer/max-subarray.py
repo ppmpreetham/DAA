@@ -13,5 +13,4 @@ def dfs(l,r, arr):
         css += arr[i]
         rss = max(rss, css)
     
-    return dfs(l, m-1, arr) + dfs(m+1, r, arr) + lss + rss + arr[i]
-    
+    return max(dfs(l, m-1, arr), lss + arr[m] + rss, dfs(m+1, r, arr))

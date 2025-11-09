@@ -13,6 +13,7 @@ struct Node{
 
 struct cmp{bool operator()(Node* a, Node* b){return a.f > b.f;}};
 
+// encode
 void dfs(Node* r, string s = ""){
     if(!r) return;
     if(r.c!='#') cout << r.c << s << endl;
