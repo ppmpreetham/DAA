@@ -12,7 +12,7 @@ using namespace std;
 void backtrack(vector<int>& nums, int target, int idx, int currSum, vector<int>& path, vector<vector<int>>& res) {
     if (idx == nums.size()){
         if(currSum == target)
-            res.push(nums);
+            res.push_back(path);
         return;
     }
 
@@ -20,7 +20,7 @@ void backtrack(vector<int>& nums, int target, int idx, int currSum, vector<int>&
     path.push_back(nums[idx]);
     backtrack(nums, target, idx+1, currSum + nums[idx], path, res);
     path.pop_back();
-    
+
     // exclude
     backtrack(nums, target, idx+1, currSum, path, res);
 

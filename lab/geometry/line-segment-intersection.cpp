@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <stdio.h>
 using namespace std;
 
 struct Point{int x,y;};
@@ -25,5 +25,5 @@ bool intersect(Point p1,Point q1,Point p2,Point q2){
 
 int main(){
     Point p1={1,1},q1={10,1},p2={1,2},q2={10,2};
-    cout<<(intersect(p1,q1,p2,q2)?"Yes":"No");
+    cout<<( intersect(p1,q1,p2,q2)? "Yes":"No");
 }

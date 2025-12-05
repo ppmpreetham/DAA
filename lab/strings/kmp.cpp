@@ -11,7 +11,6 @@ vector<int> buildLPS(string pat) {
     }
     return lps;
 }
-
 void KMPSearch(string text, string pat) {
     auto lps = buildLPS(pat);
     int i = 0, j = 0, n = text.size(), m = pat.size();
