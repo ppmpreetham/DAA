@@ -14,8 +14,7 @@ int bfs(int s, int t, vector<vector<int>>& cap, vector<int>& parent, vector<vect
                 parent[v] = u;
                 int new_flow = min(flow, cap[u][v]);
                 if (v == t) return new_flow;
-                q.push({v, new_flow});
-            }
+                q.push({v, new_flow});            }
     }
     return 0;
 }

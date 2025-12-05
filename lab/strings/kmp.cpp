@@ -2,11 +2,11 @@
 using namespace std;
 
 vector<int> buildLPS(string pat) {
-    int m = pat.size(), plen = 0;
+    int m = pat.size(), j = 0;
     vector<int> lps(m);
     for (int i = 1; i < m; ) {
-        if (pat[i] == pat[plen]) lps[i++] = ++plen;
-        else if (plen) plen = lps[plen - 1];
+        if (pat[i] == pat[j]) lps[i++] = ++j;
+        else if (j) j = lps[j - 1];
         else lps[i++] = 0;
     }
     return lps;

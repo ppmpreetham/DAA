@@ -6,7 +6,7 @@ bool isSafe(vector<vector<int>> &board, int row, int col, int n){
     // col
     for(int i = 0; i < n; i++)
         if (board[i][col] == "Q") return false;
-        
+
     // upper-left
     for(int i = row - 1; j = col - 1; i>=0 && j>=0; i--; j--)
         if (board[i][j] == "Q") return false;
@@ -20,7 +20,7 @@ bool isSafe(vector<vector<int>> &board, int row, int col, int n){
 
 void backtrack(int row, vector<string>&board, vector<vector<string>>& res, int n){
     if (row == n) { // base case
-        res.push_back(board); 
+        res.push_back(board);
         return;
     }
 
