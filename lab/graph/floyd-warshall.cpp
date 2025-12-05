@@ -12,7 +12,7 @@ int main(){
                               {INF,INF,0,1},
                               {INF,INF,INF,0}};
 
-    int n = dist.length();
+    int n = dist.size();
     for(int k = 0; k < n; k++)
         for(int i = 0; i < n; i++)
             for(int j = 0; j < n; j++)
@@ -21,7 +21,7 @@ int main(){
 
     for(auto &r: dist)
         for(auto d: r)
-            if (d=="INF") {
+            if (d==INF) {
                 cout << "INF" << endl;
             } else {
                 cout << d << endl;
